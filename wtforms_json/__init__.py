@@ -84,7 +84,7 @@ def flatten_json(
                         separator
                     )
                 )
-            elif field_class.__name__ == 'QuerySelectMultipleField'):
+            elif field_class.__name__ == 'QuerySelectMultipleField':
                 items.extend(
                     flatten_json_list(
                         unbound_field,
