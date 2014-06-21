@@ -84,6 +84,15 @@ def flatten_json(
                         separator
                     )
                 )
+            elif isinstance(field_class, QuerySelectMultipleField):
+                items.extend(
+                    flatten_json_list(
+                        unbound_field,
+                        value,
+                        new_key,
+                        separator
+                    )
+                )
             else:
                 items.append((new_key, value))
         else:
